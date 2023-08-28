@@ -91,13 +91,16 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     Console.WriteLine();
 }
 int count=0;
+double average = 0;
 
 for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j <  matrix.GetLength(1); j++)
     {
-        count=(count+matrix[i,j])/coloms;
-        Console.Write(count);
+        count=(count+matrix[i,j]);
     }
     Console.WriteLine();
+    average = (double)count / rows;
+    System.Console.WriteLine($"Среднее арифметическое столбца {i + 1} равно {average}" );
+    count = 0;
 }
